@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="title_search">Search</string>
+    <string name="title_top10">Top 10</string>
+    <string name="title_favorites">Favorites</string>
+
+    <!-- Song 1 -->
+    <string name="song1_title">Beat it"</string>
+    <string name="song1_artist">Michael Jackson</string>
+    <string name="song1_duration">4:58</string>
+    <!-- Song 2 -->
+    <string name="song2_title">In the end</string>
+    <string name="song2_artist">Linkin Park</string>
+    <string name="song2_duration">3:37</string>
+    <!-- Song 3 -->
+    <string name="song3_title">Bring me to life</string>
+    <string name="song3_artist">Evanescence</string>
+    <string name="song3_duration">4:12</string>
+    <!-- Song 4 -->
+    <string name="song4_title">Life on Mars</string>
+    <string name="song4_artist">David Bowie</string>
+    <string name="song4_duration">4:01</string>
+    <!-- Song 5 -->
+    <string name="song5_title">Nothing else matters</string>
+    <string name="song5_artist">Metallica</string>
+    <string name="song5_duration">6:25</string>
+    <!-- Song 6 -->
+    <string name="song6_title">Smells Like Teen Spirit</string>
+    <string name="song6_artist">Nirvana</string>
+    <string name="song6_duration">4:37</string>
+    <!-- Song 7 -->
+    <string name="song7_title">In My Defence</string>
+    <string name="song7_artist">Freddy Mercury</string>
+    <string name="song7_duration">4:07</string>
+    <!-- Song 8 -->
+    <string name="song8_title">Billie Jean</string>
+    <string name="song8_artist">Michael Jackson</string>
+    <string name="song8_duration">3:38</string>
+    <!-- Song 9 -->
+    <string name="song9_title">Bohemian rhapsody</string>
+    <string name="song9_artist">Queen</string>
+    <string name="song9_duration">6:07</string>
+    <!-- Song 10 -->
+    <string name="song10_title">Purple Rain</string>
+    <string name="song10_artist">Prince</string>
+    <string name="song10_duration">5:14</string>
+</resources>
