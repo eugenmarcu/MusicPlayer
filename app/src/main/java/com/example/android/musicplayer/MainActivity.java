@@ -24,11 +24,10 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     // Declare Variables
     ListView list;
-    ListViewAdapter adapter;
+    SongAdapter adapter;
     SearchView editSearch;
     ArrayList<Song> songList = new ArrayList<Song>();
 
-    private TextView mTextMessage;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -70,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         list = (ListView) findViewById(R.id.listview);
 
         // Pass results to ListViewAdapter Class
-        adapter = new ListViewAdapter(this, songList);
+        adapter = new SongAdapter(this, 0, songList);
 
         // Binds the Adapter to the ListView
         list.setAdapter(adapter);
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             }
         });
 
-        // Locate the EditText in listview_main.xml
+        // Locate the EditText in activity_main.xml
         editSearch = (SearchView) findViewById(R.id.search);
         editSearch.setOnQueryTextListener(this);
         editSearch.clearFocus();

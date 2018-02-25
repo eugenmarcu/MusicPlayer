@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,21 +18,23 @@ import java.util.Locale;
  * Created by Eugen on 22-Feb-18.
  */
 
-public class ListViewAdapter extends BaseAdapter {
+public class SongAdapter extends ArrayAdapter {
 
     // Declare Variables
 
     Context mContext;
     LayoutInflater inflater;
     private List<Song> songList = null;
-    private ArrayList<Song> arrayList;
+    private ArrayList<Song> songArrayList;
 
-    public ListViewAdapter(Context context, List<Song> songList) {
+
+    public SongAdapter(Context context, int resource, List<Song> songList) {
+        super(context, resource, songList);
         mContext = context;
         this.songList = songList;
         inflater = LayoutInflater.from(mContext);
-        this.arrayList = new ArrayList<>();
-        this.arrayList.addAll(songList);
+        this.songArrayList = new ArrayList<>();
+        this.songArrayList.addAll(songList);
     }
 
     public class ViewHolder {
@@ -96,14 +99,14 @@ public class ListViewAdapter extends BaseAdapter {
         return view;
     }
 
-    // Filter Class
+    // Filter text on search
     public void filter(String charText) {
         charText = charText.toLowerCase(Locale.getDefault());
         songList.clear();
         if (charText.length() == 0) {
-            songList.addAll(arrayList);
+            songList.addAll(songArrayList);
         } else {
-            for (Song wp : arrayList) {
+            for (Song wp : songArrayList) {
                 if (wp.getTitle().toLowerCase(Locale.getDefault()).contains(charText) || wp.getArtist().toLowerCase(Locale.getDefault()).contains(charText)) {
                     songList.add(wp);
                 }
