@@ -66,11 +66,11 @@ public class SongAdapter extends ArrayAdapter {
             holder = new ViewHolder();
             view = inflater.inflate(R.layout.list_view_item, null);
             // Locate the TextViews in list_view_item.xml
-            holder.title = (TextView) view.findViewById(R.id.list_item_title);
-            holder.artist = (TextView) view.findViewById(R.id.list_item_artist);
-            holder.duration = view.findViewById(R.id.list_item_duration);
+            holder.title = (TextView) view.findViewById(R.id.list_item_title_text_view);
+            holder.artist = (TextView) view.findViewById(R.id.list_item_artist_text_view);
+            holder.duration = view.findViewById(R.id.list_item_duration_text_view);
             holder.favorites = view.findViewById(R.id.list_item_favorites);
-            holder.rank = view.findViewById(R.id.list_item_rank);
+            holder.rank = view.findViewById(R.id.list_item_rank_text_view);
             view.setTag(holder);
         } else {
             holder = (ViewHolder) view.getTag();

@@ -35,16 +35,16 @@ public class NowPlayingActivity extends AppCompatActivity {
         TextView textView = findViewById(R.id.now_playing_text);
         textView.setText(title + " - " + artist);
         //Set the times
-        timeCurrent = findViewById(R.id.now_playing_time);
+        timeCurrent = findViewById(R.id.now_playing_time_text_view);
         timeCurrent.setText(showTime(progress));
-        timeEnd = findViewById(R.id.now_playing_time_end);
+        timeEnd = findViewById(R.id.now_playing_time_end_text_view);
         timeEnd.setText(duration);
 
-        progressBar = findViewById(R.id.now_playing_progress);
+        progressBar = findViewById(R.id.now_playing_progress_seek_bar);
         progressBar.setMax(songDuration);
 
         //On Play button
-        final ImageView playBtn = findViewById(R.id.now_playing_play);
+        final ImageView playBtn = findViewById(R.id.now_playing_play_image_view);
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,11 +56,11 @@ public class NowPlayingActivity extends AppCompatActivity {
             }
         });
 
-        ImageView image = findViewById(R.id.now_playing_image);
+        ImageView image = findViewById(R.id.now_playing_image_image_view);
         image.setImageResource(R.drawable.music1);
 
         //On Pause Button
-        ImageView pauseBtn = findViewById(R.id.now_playing_pause);
+        ImageView pauseBtn = findViewById(R.id.now_playing_pause_image_view);
         pauseBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,7 +72,7 @@ public class NowPlayingActivity extends AppCompatActivity {
         });
 
         //On Stop Button
-        ImageView stopBtn = findViewById(R.id.now_playing_stop);
+        ImageView stopBtn = findViewById(R.id.now_playing_stop_image_view);
         stopBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
